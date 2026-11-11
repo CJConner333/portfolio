@@ -1,0 +1,187 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Serif", serif;
+}
+
+body {
+  background-color: #f0f0ff;
+}
+
+H1 {
+    font-size: 3rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.title {
+  front-size: 120px;
+  margin-bottom: .75rem;
+  text-align: left;
+  line-height: 1;
+}
+
+.blue {
+  color: #090df5;
+}
+
+.header__para {
+  line-height: 2;
+  font-size: 1.5rem;
+  max-width: 450px;
+}
+
+/*
+
+  LANDING PAGE
+
+*/
+
+#LANDING-PAGE {
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.social__list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #090df5;
+  color: #fff;
+  font-size: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.social__link:hover,
+.social__link:focus-visible {
+  transform: translateY(-4px);
+  background-color: #fff;
+  color: #090df5;
+  box-shadow: 0 6px 14px rgb(9 13 245 / 30%);
+}
+
+.social__link:focus-visible {
+  outline: 2px solid #090df5;
+  outline-offset: 3px;
+}
+
+/*
+
+  NAVIGATION
+
+*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+.nav__link--anchor {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.contrast-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.contrast-toggle img {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 
+
+Responsive Design
+
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  .social__link {
+    transition: none;
+  }
+}
