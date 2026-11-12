@@ -13,6 +13,24 @@ logoRestartButton.addEventListener("click", () => {
   logoSpinAnimation.beginElement();
 });
 
+const landingPage = document.getElementById("landing-page");
+
+if (!(landingPage instanceof HTMLElement)) {
+  throw new Error('Landing page "#landing-page" was not found.');
+}
+
+const mailButton = document.createElement("a");
+mailButton.href = "mailto:chrisconner333@gmail.com";
+mailButton.className = "mail__btn click";
+mailButton.setAttribute("aria-label", "Email me");
+
+const mailIcon = document.createElement("i");
+mailIcon.className = "fa-solid fa-envelope";
+mailIcon.setAttribute("aria-hidden", "true");
+mailButton.append(mailIcon);
+
+landingPage.insertBefore(mailButton, landingPage.querySelector(".scroll"));
+
 const socialList = document.getElementById("social-links");
 
 if (!(socialList instanceof HTMLDivElement)) {
