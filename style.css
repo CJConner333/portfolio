@@ -13,6 +13,18 @@ H1 {
   font-size: 3rem;
 }
 
+.container {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 li {
   list-style-type: none;
 }
@@ -46,7 +58,8 @@ button {
 
 */
 
-#LANDING-PAGE {
+#landing-page {
+  position: relative;
   min-height: 100vh;
 }
 
@@ -249,11 +262,290 @@ nav {
   height: 1rem;
 }
 
+/*
+
+MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  height: 650px;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.modal__half {
+  width: 50%;
+}
+
+.modal__about {
+  background-color: rgb(245, 245, 245);
+  padding: 40px 72px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__languages {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.modal__language {
+  width: 25%;
+  padding: 10px;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language__name {
+  position: absolute;
+  bottom: -10px;
+  transform: scale(0);
+  transition: all 300ms ease;
+}
+
+.modal__language:hover .language__name {
+  transform: scale(1);
+}
+
+.modal__language:hover {
+  filter: brightness(80%);
+  transform: scale(0.9);
+}
+
+.modal__language--img {
+  width: 100%;
+}
+
+.modal__contact {
+  background-color: #242424;
+  color: white;
+}
+
+.modal__title {
+  font-size: 26px;
+}
+
+.modal__sub-title {
+  margin: 12px 0 24px 0;
+  font-size: 16px;
+}
+
+.modal__para {
+  line-height: 1.35;
+}
+
+
+
+
+
+/*
+
+  PROJECTS
+
+*/
+
+.section__title {
+  text-align:center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.project__image {
+  width: 100%
+}
+
+.project__wrapper {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.project__wrapper:hover .project__description {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.project__wrapper:hover .project__image {
+  transform: scale(1.07);
+  filter: blur(5px);
+}
+
+.project__description {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 300ms, transform 450ms ease;
+  color: white;
+  max-width: 550px;
+}
+
+.project__wrapper:hover .project__wrapper--bg:hover {
+  opacity: 0.7;
+}
+
+.project__wrapper--bg {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1d25;
+  opacity: 0;
+}
+
+.project__description--title {
+  font-size: 40px;
+}
+
+.project__description--sub-title {
+  margin-top: 8px;
+}
+
+.project__description--link {
+  color: white;
+  font-size: 20px;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.project__description--para {
+  margin: 16px 0;
+}
+
+/* 
+
+FOOTER
+
+*/
+
+footer {
+  background-color: rgb(17, 154, 154);
+  display: flex;
+}
+
+.footer__container {
+  margin: 0 auto;
+  
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo--image {
+  width: 70px;
+  overflow: hidden;
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: 28px 0;
+}
+
+.footer__social--link, .footer__copyright {
+  color: white;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
 /* 
 
 Responsive Design
 
 */
+
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    min-height: 100px;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .logo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .nav__actions {
+    gap: 0.5rem;
+  }
+
+  .nav__link {
+    margin: 0 8px;
+  }
+
+  .nav__link--anchor {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 7rem;
+  }
+
+  .title {
+    font-size: clamp(3.5rem, 11vw, 5rem);
+  }
+
+  .header__para {
+    font-size: 1.125rem;
+  }
+
+  .mail__btn {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .nav__link {
+    margin: 0 5px;
+  }
+
+  .nav__link--anchor {
+    font-size: 0.75rem;
+  }
+
+  .header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .social__link {

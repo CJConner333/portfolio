@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="CJC monogram spin">
+  <title>Christopher Conner</title>
+  <!-- Outer ring — stationary -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#0A0A0A" stroke-width="18"/>
+  <!-- Letters group — spins -->
+  <g id="cjc-letters" transform="rotate(0 256 256)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="7920 256 256"
+      to="0 256 256"
+      dur="10s"
+      begin="0s"
+      fill="freeze"
+      calcMode="spline"
+      keyTimes="0;1"
+      keySplines="0.05 0.85 0.15 1"
+    />
+    <path fill="#0A0A0A" d="
+      M 248 130
+      A 126 126 0 1 0 248 382
+      A 40 40 0 0 0 248 342
+      A 86 86 0 1 1 248 170
+      A 40 40 0 0 0 248 130
+      Z"/>
+    <path fill="#0A0A0A" d="
+      M 264 130
+      A 40 40 0 0 0 264 170
+      A 86 86 0 1 1 264 342
+      A 40 40 0 0 0 264 382
+      A 126 126 0 1 0 264 130
+      Z"/>
+    <path fill="#0A0A0A" d="
+      M 232 118
+      H 280
+      V 158
+      H 268
+      V 310
+      A 36 36 0 0 1 232 346
+      H 212
+      V 306
+      H 228
+      A 8 8 0 0 0 236 298
+      V 158
+      H 232
+      Z"/>
+  </g>
+</svg>
+
+Inverted, white/clear background for blackout/night background.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="CJC monogram spin white">
+  <title>CJC — letters spin to rest (white on transparent)</title>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#FFFFFF" stroke-width="18"/>
+  <g id="cjc-letters" transform="rotate(0 256 256)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="7920 256 256"
+      to="0 256 256"
+      dur="10s"
+      begin="0s"
+      fill="freeze"
+      calcMode="spline"
+      keyTimes="0;1"
+      keySplines="0.05 0.85 0.15 1"
+    />
+    <path fill="#FFFFFF" d="
+      M 248 130
+      A 126 126 0 1 0 248 382
+      A 40 40 0 0 0 248 342
+      A 86 86 0 1 1 248 170
+      A 40 40 0 0 0 248 130
+      Z"/>
+    <path fill="#FFFFFF" d="
+      M 264 130
+      A 40 40 0 0 0 264 170
+      A 86 86 0 1 1 264 342
+      A 40 40 0 0 0 264 382
+      A 126 126 0 1 0 264 130
+      Z"/>
+    <path fill="#FFFFFF" d="
+      M 232 118
+      H 280
+      V 158
+      H 268
+      V 310
+      A 36 36 0 0 1 232 346
+      H 212
+      V 306
+      H 228
+      A 8 8 0 0 0 236 298
+      V 158
+      H 232
+      Z"/>
+  </g>
+</svg>
