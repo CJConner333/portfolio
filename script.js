@@ -59,3 +59,4 @@ for (const { label, iconClass, href } of socialIcons) {
   item.append(icon);
   socialList.append(item);
 }
+
