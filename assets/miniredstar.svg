@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="298" height="279" viewBox="0 0 298 279">
+  <!--
+    Star 4 — red star with white double border
+    Source: redstar-2.png (37.1)
+    Canvas: 298 × 279 (unchanged)
+    Background: transparent
+    Structure: outer red → white band → inner red face
+  -->
+  <defs>
+    <!-- Regular 5-point star helper geometry (center 149,139.5) -->
+  </defs>
+
+  <!-- OUTER red rim -->
+  <path
+    fill="#FF1E3C"
+    d="M149,6
+       L178.6,96.5
+       L274,96.5
+       L196.8,152.5
+       L226.4,243
+       L149,187
+       L71.6,243
+       L101.2,152.5
+       L24,96.5
+       L119.4,96.5
+       Z"
+  />
+
+  <!-- WHITE band (inset ~11px along normals / scaled toward center) -->
+  <path
+    fill="#FFFFFF"
+    d="M149,20
+       L174.5,101
+       L258,101
+       L191.5,150
+       L217,230
+       L149,181
+       L81,230
+       L106.5,150
+       L40,101
+       L123.5,101
+       Z"
+  />
+
+  <!-- INNER red face (further inset ~9px) -->
+  <path
+    fill="#FF1E3C"
+    d="M149,32
+       L171,105
+       L245,105
+       L187,148
+       L209,219
+       L149,176
+       L89,219
+       L111,148
+       L53,105
+       L127,105
+       Z"
+  />
+</svg>

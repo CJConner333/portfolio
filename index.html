@@ -71,15 +71,16 @@
         </li>
 
         <li class="nav__link">
-          <a href="mailto:chrisconner333@gmail.com" class="
+          <a href="#contact" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black"
+            data-open-modal="contact"
             >Contact</a>
         </li>
       </ul>
 
-      <button class="contrast-toggle" type="button" aria-label="Toggle contrast">
+      <button class="contrast-toggle" type="button" aria-label="Toggle dark theme" aria-pressed="false">
         <img src="assets/contrast-icon.svg" alt="">
       </button>
     </div>
@@ -114,23 +115,23 @@
       </p>
       <div class="modal__languages">
         <figure class="modal__language">
-          <img src="/assets/html5.svg" alt="HTML">
+          <img src="assets/html5.svg" alt="HTML">
           <span class="language__name">HTML</span>
         </figure>
         <figure class="modal__language">
-          <img src="/assets/javascript.svg" alt="JavaScript">
+          <img src="assets/javascript.svg" alt="JavaScript">
           <span class="language__name">JavaScript</span>
         </figure>
         <figure class="modal__language">
-          <img src="/assets/php.svg" alt="PHP">
+          <img src="assets/php.svg" alt="PHP">
           <span class="language__name">PHP</span>
         </figure>
         <figure class="modal__language">
-          <img src="/assets/mysql.svg" alt="MYSQL">
+          <img src="assets/mysql.svg" alt="MYSQL">
           <span class="language__name">MYSQL</span>
         </figure>
         <figure class="modal__language">
-          <img src="/assets/react.svg" alt="REACT">
+          <img src="assets/react.svg" alt="REACT">
           <span class="language__name">REACT</span>
         </figure>
       </div>
@@ -140,25 +141,31 @@
       <h3 class="modal__title modal__title--contact"> Let's have a chat!</h3>
 
       <h4 class="modal__sub-title modal__sub-title--contact"> I'm open to new opportunities.</h4>
-      <form id="contact__form" action="">
-        
-        <div class="form__item">
-          <label class="form__item--label">Name</label>
-          <input class="input" name="user_name" type="text" required>
+      <form id="contact__form" action="contact.php" method="post" target="contactFormResponse">
+        <div class="form__honeypot" aria-hidden="true">
+          <label for="company">Leave this field empty</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
         </div>
 
         <div class="form__item">
-          <label class="form__item--label">Email</label>
-          <input class="input" name="user_email" type="email" required>
+          <label class="form__item--label" for="contact-name">Name</label>
+          <input class="input" id="contact-name" name="name" type="text" maxlength="150" required>
         </div>
 
         <div class="form__item">
-          <label class="form__item--label">Message</label>
-          <textarea class="input" name="user_message" required></textarea>
+          <label class="form__item--label" for="contact-email">Email</label>
+          <input class="input" id="contact-email" name="email" type="email" maxlength="254" required>
         </div>
+
+        <div class="form__item">
+          <label class="form__item--label" for="contact-message">Message</label>
+          <textarea class="input" id="contact-message" name="message" maxlength="5000" required></textarea>
+        </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAGDp2hdS1rCzhETp" data-action="contact"></div>
+        <p id="contact__feedback" class="form__feedback" aria-live="polite"></p>
         <button id="contact__submit" class="form__submit" type="submit">Send it my way</button>
-
       </form>
+      <iframe name="contactFormResponse" title="Contact form response" hidden></iframe>
       <div class="modal__overlay modal__overlay--loading" aria-hidden="true">
         <i class="fa-solid fa-spinner" aria-hidden="true"></i>
       </div>
@@ -166,7 +173,9 @@
         Thanks for the message! Looking forward to speaking with you soon.
       </div>
     </div>
-    <i class="fas fa-times modal__exit" click></i>
+    <button class="modal__exit" type="button" aria-label="Close contact modal">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
   </div>
   </section>
 
@@ -179,7 +188,7 @@
         <ul class="project__list">
           <li class="project">
             <div class="project__wrapper">
-              <img src="/assets/blinker mockup.png" class="project__image" alt="">
+              <img src="assets/blinker mockup.png" class="project__image" alt="">
 
                 <div class="project__wrapper--bg">
                 <div class="project__description">

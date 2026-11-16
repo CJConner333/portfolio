@@ -309,7 +309,7 @@ MODAL
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.9);
   width: 90%;
   max-width: 1000px;
   height: 650px;
@@ -317,6 +317,17 @@ MODAL
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
+}
+
+body.modal--open .modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .modal__half {
@@ -325,13 +336,27 @@ MODAL
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform 500ms ease;
+}
+
+.modal__about {
+  transform: translateX(-120%);
+}
+
+.modal__contact {
+  transform: translateX(120%);
+}
+
+body.modal--open .modal__about,
+body.modal--open .modal__contact {
+  transform: translateX(0);
 }
 
 .modal__about {
   background-color: rgb(245, 245, 245);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url("/assets/modal-about-background.svg");
+    url("assets/modal-about-background.svg");
   background-size: cover;
   background-position: center;
   padding: 40px 72px;
@@ -374,7 +399,7 @@ MODAL
 
 .modal__contact {
   background-color: #242424;
-  background-image: url(/assets/modal-contact-background.svg);
+  background-image: url(assets/modal-contact-background.svg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -397,6 +422,24 @@ MODAL
 .form__item {
   margin-bottom: 20px;
   
+}
+
+.form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form__feedback {
+  min-height: 1.25em;
+  margin: 8px 0;
+  color: white;
+}
+
+.form__feedback--error {
+  color: #ffb3b3;
 }
 
 .form__submit {
@@ -431,6 +474,10 @@ MODAL
   align-items: center;
   justify-content: center;
   z-index: 1;
+}
+
+.modal__overlay--visible {
+  display: flex;
 }
 
 .modal__contact--loading .modal__overlay--loading,
@@ -476,6 +523,7 @@ MODAL
     color: black;
     font-size: 36px;
     z-index: 100;
+    cursor: pointer;
   }
 
 
@@ -601,6 +649,44 @@ footer {
 
 .footer__copyright {
   text-align: center;
+}
+
+body.dark-theme {
+  background-color: #17171f;
+  color: #f3f3f5;
+}
+
+body.dark-theme .nav__link--anchor {
+  color: #f3f3f5;
+}
+
+body.dark-theme .blue {
+  color: #9aa8ff;
+}
+
+body.dark-theme .logo svg,
+body.dark-theme .contrast-toggle img {
+  filter: invert(1);
+}
+
+body.dark-theme .scroll__icon {
+  border-color: #f3f3f5;
+}
+
+body.dark-theme .scroll__icon::after {
+  background-color: #f3f3f5;
+}
+
+body.dark-theme .modal__about {
+  background-color: #24242c;
+  background-image:
+    linear-gradient(rgba(23, 23, 31, 0.82), rgba(23, 23, 31, 0.82)),
+    url("assets/modal-about-background.svg");
+  color: #f3f3f5;
+}
+
+body.dark-theme .modal__exit {
+  color: #f3f3f5;
 }
 
 /* 

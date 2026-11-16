@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="285" height="276" viewBox="0 0 285 276">
+  <!--
+    Star 1 — black five-point star
+    Source: blackstar-2.png (34.1)
+    Canvas: 285 × 276 (unchanged)
+    Background: transparent
+    Fill: solid #000000
+  -->
+  <path
+    fill="#000000"
+    d="M142.5,6.2
+       L170.92,93.55
+       L262.8,93.55
+       L188.44,147.55
+       L216.86,234.9
+       L142.5,180.9
+       L68.14,234.9
+       L96.56,147.55
+       L22.2,93.55
+       L114.08,93.55
+       Z"
+  />
+</svg>
+
+
+
