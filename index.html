@@ -20,7 +20,7 @@
 </head>
 <body>
 
-  <section id="landing-page" onmousemove="moveBackground(event)">
+  <section id="landing-page">
 
   <nav>
 
@@ -123,14 +123,6 @@
           <span class="language__name">JavaScript</span>
         </figure>
         <figure class="modal__language">
-          <img src="assets/php.svg" alt="PHP">
-          <span class="language__name">PHP</span>
-        </figure>
-        <figure class="modal__language">
-          <img src="assets/mysql.svg" alt="MYSQL">
-          <span class="language__name">MYSQL</span>
-        </figure>
-        <figure class="modal__language">
           <img src="assets/react.svg" alt="REACT">
           <span class="language__name">REACT</span>
         </figure>
@@ -195,9 +187,20 @@
     <div class="container">
       <div class="row">
         <h1 class="section__title">
-          Here</figure> are some of my <span class="blue">projects</span>
+          Here are some of my <span class="blue">projects</span>
         </h1>
+      
+      <div class="project__carousel">
+        <div class="project__carousel-controls">
+          <button type="button" class="project__list--nav project__list-nav--prev" aria-label="Previous project">
+            <img src="assets/arrowleftcircle.svg" alt="">
+          </button>
+          <button type="button" class="project__list--nav project__list-nav--next" aria-label="Next project">
+            <img src="assets/arrowrightcircle.svg" alt="">
+          </button>
+        </div>
         <ul class="project__list">
+            
           <li class="project">
             <div class="project__wrapper">
               <img src="assets/claws.webp" class="project__image" alt="Claws Nail Supply and Salon">

@@ -68,6 +68,41 @@ for (const { label, iconClass, href } of socialIcons) {
   socialList.append(item);
 }
 
+const projectCarousel = document.querySelector(".project__carousel");
+if (!(projectCarousel instanceof HTMLElement)) {
+  throw new Error('Project carousel ".project__carousel" was not found.');
+}
+
+const projectList = projectCarousel.querySelector(".project__list");
+const previousProjectButton = projectCarousel.querySelector(
+  ".project__list-nav--prev",
+);
+const nextProjectButton = projectCarousel.querySelector(
+  ".project__list-nav--next",
+);
+
+if (
+  !(projectList instanceof HTMLUListElement) ||
+  !(previousProjectButton instanceof HTMLButtonElement) ||
+  !(nextProjectButton instanceof HTMLButtonElement)
+) {
+  throw new Error("Project carousel track or navigation buttons were not found.");
+}
+
+previousProjectButton.addEventListener("click", () => {
+  projectList.scrollBy({
+    left: -projectList.clientWidth,
+    behavior: "smooth",
+  });
+});
+
+nextProjectButton.addEventListener("click", () => {
+  projectList.scrollBy({
+    left: projectList.clientWidth,
+    behavior: "smooth",
+  });
+});
+
 //* MODAL *//
 
 let isModalOpen = false;
@@ -87,6 +122,8 @@ function moveBackground(event) {
       `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`;
   }
 }
+
+landingPage.addEventListener("pointermove", moveBackground);
 
 function toggleContrast() {
   const isDarkTheme = document.body.classList.toggle("dark-theme");
