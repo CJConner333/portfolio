@@ -105,6 +105,9 @@ const contactFeedback = document.getElementById("contact__feedback");
 const formResponseFrame = document.querySelector(
   'iframe[name="contactFormResponse"]',
 );
+
+/* TURNSTYLE */
+
 const turnstileContainer =
   contactForm instanceof HTMLFormElement
     ? contactForm.querySelector(".cf-turnstile")
@@ -155,6 +158,8 @@ function renderTurnstile() {
     },
   });
 }
+
+/* SUBMISSION */
 
 function finishSubmission(message, succeeded = false) {
   if (submissionTimeout !== null) {
@@ -307,4 +312,19 @@ if (modal instanceof HTMLElement) {
   modal.setAttribute("aria-hidden", "true");
 }
 
+/* SHAPES 
 
+const scaleFactor = 1 / 20;
+
+function moveBackground(event)
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX / 20;
+  const y = event.clientY / 20;
+
+  for (let i = 0; i < shapes.length; ++i) {
+    const isOdd = i % 2 !== 0;
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = 'translate(${x * boolInt}px, ${y * boolInt})'
+  }
+  
+  */

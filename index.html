@@ -20,7 +20,7 @@
 </head>
 <body>
 
-  <section id="landing-page">
+  <section id="landing-page" onmousemove="moveBackground(event)">
 
   <nav>
 
@@ -90,7 +90,7 @@
   <header class="header">
     <div class="header__content">
       <h1 class="title">Hey,</h1>
-      <h1 class="title title--secondary">I'm Chris.</h1>
+      <h1 class="title title--secondary">I'm <a class="blue">Chris</h1></a>
       <p class="header__para">I'm a <b class="blue"> Frontend Developer</b> with a strong passion for creating engaging user experiences.
         <br>
         Here's a bit more <b class="blue">about me</b>.
@@ -108,7 +108,7 @@
   <div class="modal">
     <div class="modal__half modal__about">
       <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
-      <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+      <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer</h4>
       <p class="modal__para"> I'm a 2nd career <b class="blue"> front-end developer</b> with decades of organizational leadership and small business development. I have a <b class="blue"> passion</b> for building websites with <b class="blue">great user experiences</b> in line with the needs and goals of the business and ngo sectors.
         <br><br>
         I currently work on <b class="blue">practical, simple, minimalist</b> sandwich-board solutions to help push businesses and organizations to their <b class="blue">next level of growth.</b>
@@ -177,6 +177,18 @@
       <i class="fas fa-times" aria-hidden="true"></i>
     </button>
   </div>
+  <img src="/assets/miniblackstar.svg" class="shape shape--0">
+  <img src="/assets/minibluestar.svg" class="shape shape--1">
+  <img src="/assets/minigoldstar.svg" class="shape shape--2">
+  <img src="/assets/miniredstar.svg" class="shape shape--3">
+  <img src="/assets/miniblackstar.svg" class="shape shape--4">
+  <img src="/assets/minibluestar.svg" class="shape shape--5">
+  <img src="/assets/minigoldstar.svg" class="shape shape--6">
+  <img src="/assets/miniredstar.svg" class="shape shape--7">
+  <img src="/assets/miniblackstar.svg" class="shape shape--8">
+
+
+
   </section>
 
   <section id="projects">
@@ -188,30 +200,86 @@
         <ul class="project__list">
           <li class="project">
             <div class="project__wrapper">
-              <img src="assets/blinker mockup.png" class="project__image" alt="">
+              <img src="assets/claws.webp" class="project__image" alt="Claws Nail Supply and Salon">
 
-                <div class="project__wrapper--bg">
+              <div class="project__wrapper--bg">
                 <div class="project__description">
 
                   <h3 class="project__description--title">
-                    Car Sales Project
+                    Nail Supply and Salon Project
                   </h3>
                   <h4 class="project__description--sub-title">
-                    Html, CSS, JavaScript, Vue, Vuex
+                    Html, CSS, JavaScript, Shopify Integration
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore consectetur in voluptatum quidem neque. Ducimus modi aperiam ratione, error esse debitis quasi quas vero earum expedita obcaecati labore accusamus deserunt?
+                    Claws is a high end nail salon and supply store. Their website was slow, crashed alot, and became unusable. We moved the online store to Shopify for small business security and optimized the catalog and images so the site loads immediately. There's room to grow with a future booking integration anchored by the hand element.
                   </p>
                   <div class="project__description--links">
-                    <a href="#" class="project__description--link">
+                    <a href="https://github.com/CJConner333/claws.git" class="project__description--link">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" class="project__description--link">
+                    <a href="https://clawsdc.com" class="project__description--link">
                       <i class="fas fa-link"></i>
                     </a>
                   </div>
                 </div>
+              </div>
             </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="assets/splashpage.webp" class="project__image" alt="Splash Page">
+
+              <div class="project__wrapper--bg">
+                <div class="project__description">
+
+                  <h3 class="project__description--title">
+                    Splash Page Website Design Company Project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, E-Commerce Integration
+                  </h4>
+                  <p class="project__description--para">
+                    Splash Page is an English Language launch for a group of Cambodian students in the Department of Information Technology Engineering of the Royal University of Phnom Penh. This is part of an effort to expand opportunities for education in the Tech and Engineering boom. Clean and simple, we translated a western aesthetic with e-commerce and ad integration for an American reach. Their ads run on TikTok and Facebook.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/CJConner333/splashpage-biz.git" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://splashpage.biz" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="assets/treact.webp" class="project__image" alt="T-React">
+
+              <div class="project__wrapper--bg">
+                <div class="project__description">
+
+                  <h3 class="project__description--title">
+                    T-React website template subscription service
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odit assumenda pariatur consectetur accusamus fugiat porro repudiandae sit ex distinctio obcaecati velit delectus iure, quae dolor a? Iste, quasi amet.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/CJConner333/claws.git" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://clawsdc.com" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
@@ -237,7 +305,7 @@
 </svg>
         </div>
         <div class="footer__social--list">
-          <a href="#" class="
+          <a href="https://github.com/CJConner333" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white">
