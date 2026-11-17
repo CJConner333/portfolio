@@ -1,3 +1,5 @@
+/* LOGO SPINNER */
+
 const logoRestartButton = document.getElementById("logo-restart");
 const logoSpinAnimation = document.getElementById("logo-spin");
 
@@ -80,7 +82,7 @@ function moveBackground(event) {
   for (let i = 0; i < shapes.length; ++i) {
     const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1;
-    // Added rotate after tutorial
+    
     shapes[i].style.transform =
       `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`;
   }
@@ -106,7 +108,7 @@ const formResponseFrame = document.querySelector(
   'iframe[name="contactFormResponse"]',
 );
 
-/* TURNSTYLE */
+/* TURNSTYLE AND CONTACT FORM */
 
 const turnstileContainer =
   contactForm instanceof HTMLFormElement
@@ -158,8 +160,6 @@ function renderTurnstile() {
     },
   });
 }
-
-/* SUBMISSION */
 
 function finishSubmission(message, succeeded = false) {
   if (submissionTimeout !== null) {
@@ -312,19 +312,4 @@ if (modal instanceof HTMLElement) {
   modal.setAttribute("aria-hidden", "true");
 }
 
-/* SHAPES 
 
-const scaleFactor = 1 / 20;
-
-function moveBackground(event)
-  const shapes = document.querySelectorAll(".shape");
-  const x = event.clientX / 20;
-  const y = event.clientY / 20;
-
-  for (let i = 0; i < shapes.length; ++i) {
-    const isOdd = i % 2 !== 0;
-    const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = 'translate(${x * boolInt}px, ${y * boolInt})'
-  }
-  
-  */
